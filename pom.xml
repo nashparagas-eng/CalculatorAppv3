@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ph.edu.dlsu.lbycpei</groupId>
+    <groupId>ph.edu.dlsu.lbycpob</groupId>
     <artifactId>CalculatorApp</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>CalculatorApp</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>6.1.1</junit.version>
+        <junit.version>5.11.0</junit.version>
     </properties>
 
     <dependencies>
@@ -56,7 +56,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                ph.edu.dlsu.lbycpei.calculatorapp/ph.edu.dlsu.lbycpei.calculatorapp.HelloApplication
+                                ph.edu.dlsu.lbycpob.calculatorapp/ph.edu.dlsu.lbycpob.calculatorapp.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
