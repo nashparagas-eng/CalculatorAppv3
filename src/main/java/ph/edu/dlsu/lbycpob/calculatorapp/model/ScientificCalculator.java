@@ -141,6 +141,11 @@ public class ScientificCalculator extends Calculator {
             // Special functions requiring custom implementation
             case "factorial" -> factorial(operand);  // n! = n × (n-1) × (n-2) × ... × 1
 
+            // ==================== ADDED ====================
+            // "sqr" (x^2) backs the new x^2 button.
+            case "sqr" -> operand * operand;
+            // =================================================
+
             case "reciprocal" -> { // no button yet
                 // Reciprocal (1/x) with protection against division by zero
                 if (operand == 0) {
