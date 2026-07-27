@@ -5,10 +5,14 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.*;
-import javafx.scene.text.Font;
-import java.util.HashMap;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.RowConstraints;
+import javafx.scene.layout.VBox;
+
+import java.util.LinkedHashMap;
 import java.util.Map;
+
 
 /**
  * The CalculatorView class represents the user interface (View) component of the calculator
