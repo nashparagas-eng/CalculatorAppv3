@@ -146,6 +146,9 @@ public class ScientificCalculator extends Calculator {
             case "sqr" -> operand * operand;
             // =================================================
 
+            // ScientificCalculator.java — new case inside performScientificOperation's switch
+            case "cube" -> operand * operand * operand;
+
             case "reciprocal" -> { // no button yet
                 // Reciprocal (1/x) with protection against division by zero
                 if (operand == 0) {
