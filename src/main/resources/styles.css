@@ -12,8 +12,8 @@
 
 /* Main calculator body */
 .calculator-body {
-    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
-    -fx-border-color: #1a252f;
+    -fx-background-color: linear-gradient(to bottom, #155798, #2d435a);
+    -fx-border-color: #09365e;
     -fx-border-width: 2px;
     -fx-border-radius: 10px;
     -fx-background-radius: 10px;
