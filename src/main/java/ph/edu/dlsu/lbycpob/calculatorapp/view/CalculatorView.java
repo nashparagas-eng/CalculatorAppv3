@@ -72,6 +72,8 @@ public class CalculatorView {
                 // 1/x (reciprocal), x^2 (square), EXP (e^x), |x| (absolute value)
                 {"1/x", "x²", "EXP", "|x|"},
                 // =====================================================
+                // CalculatorView.java — new row, inserted after the 1/x row
+                {"∛x", "x³", "e", "Ans"},
                 {"7", "8", "9", "/"},
                 {"4", "5", "6", "*"},
                 {"1", "2", "3", "-"},
