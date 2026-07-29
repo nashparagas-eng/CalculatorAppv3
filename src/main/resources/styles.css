@@ -133,12 +133,12 @@
 }
 
 .function-button:hover {
-    -fx-background-color: linear-gradient(to bottom, #f7dc6f, #f39c12);
+    -fx-background-color: linear-gradient(to bottom, #2bc098, #3ce7b9);
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 5, 0, 0, 2);
 }
 
 .function-button:pressed {
-    -fx-background-color: linear-gradient(to bottom, #e67e22, #d35400);
+    -fx-background-color: linear-gradient(to bottom, #2bc098, #3ce7b9);
     -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 3, 0, 0, 0);
 }
 
