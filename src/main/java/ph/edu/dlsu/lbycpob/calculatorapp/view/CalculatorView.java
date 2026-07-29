@@ -41,7 +41,7 @@ public class CalculatorView {
         root.setAlignment(Pos.TOP_CENTER);
         root.getStyleClass().add("calculator-body");
 
-        Label topLabel = new Label("LBYCPOB - E2x+");
+        Label topLabel = new Label("LBYCPOB - E2x+ Modified by Group 10");
         topLabel.getStyleClass().addAll("top-label", "branding-label");
 
         display = new TextField("0");
