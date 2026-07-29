@@ -88,19 +88,24 @@ public class CalculatorView {
                 {"0", ".", "=", "+"},
         };
 
-
-
         String[][] rowStyles = {
                 {"function-button", "function-button", "function-button", "function-button"},
+                // ==================== ADDED ====================
+                {"function-button", "function-button", "function-button", "function-button"},
+                // =================================================
                 {"function-button", "scientific-button", "scientific-button", "scientific-button"},
                 {"function-button", "scientific-button", "scientific-button", "operator-button"},
                 {"function-button", "scientific-button", "scientific-button", "operator-button"},
                 {"scientific-button", "scientific-button", "scientific-button", "scientific-button"},
+                // ==================== ADDED ====================
+                {"scientific-button", "scientific-button", "function-button", "function-button"},
+                // =================================================
                 {"number-button", "number-button", "number-button", "operator-button"},
                 {"number-button", "number-button", "number-button", "operator-button"},
                 {"number-button", "number-button", "number-button", "operator-button"},
                 {"number-button", "number-button", "equals-button", "operator-button"},
         };
+
 
         for (int r = 0; r < rowLabels.length; r++) {
             addRow(grid, r, rowLabels[r], rowStyles[r]);
