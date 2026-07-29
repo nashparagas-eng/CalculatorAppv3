@@ -146,9 +146,6 @@ public class ScientificCalculator extends Calculator {
             case "sqr" -> operand * operand;
             // =================================================
 
-            //Add here  // "cube" (x^3) backs the new x^3 button.
-            //            case "cube" -> operand * operand * operand;
-
             case "reciprocal" -> { // no button yet
                 // Reciprocal (1/x) with protection against division by zero
                 if (operand == 0) {

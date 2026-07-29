@@ -235,9 +235,11 @@ public abstract class Calculator {
         return token.matches("[+\\-*/%^]"); // Added % for modulo
     }
 
+    // isFunction regex — added "cube" for consistency with sqr/reciprocal
     protected boolean isFunction(String token) {
-        return token.matches("sin|cos|tan|asin|acos|atan|log|ln|sqrt|cbrt|exp|abs|factorial");
+        return token.matches("sin|cos|tan|asin|acos|atan|log|ln|sqrt |cbrt|exp|abs|factorial|reciprocal|sqr|cube");
     }
+
 
     // Add a separate method to check if token is a unary operator
     protected boolean isUnaryOperator(String token) {
