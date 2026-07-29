@@ -36,10 +36,6 @@ public abstract class Calculator {
      */
     public static final double PI = Math.PI;
 
-    /**
-     * The mathematical constant e (Euler's number) ≈ 2.71828
-     */
-    protected static final double E = Math.E;
 
     /**
      * Abstract method that must be implemented by subclasses to define specific operations.
