@@ -13,22 +13,19 @@ import javafx.scene.layout.VBox;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-
 /**
- * The CalculatorView class represents the user interface (View) component of the calculator
- * following the MVC (Model-View-Controller) design pattern.
- *
- * This class is responsible for:
- * - Creating and organizing all visual components (buttons, display, layout)
- * - Managing the appearance and styling of the calculator
- * - Providing access to UI components for the controller
- * - Updating the display when calculations are performed
- *
- * The view does NOT handle any business logic or calculations - it only manages
- * the visual presentation and provides interfaces for user interaction.
- *
+ * CalculatorView is the "V" in MVC. It builds the JavaFX scene graph and exposes
+ * getButton(label) / getDisplay() / getRoot() / updateDisplay(text) so the
+ * Controller can wire event handlers without knowing layout details.
+ * <p>
+ * ==================== CHANGED ====================
+ * Reworked for a compact layout: fixed row/button heights instead of
+ * Priority.ALWAYS vgrow (which stretched rows to fill whatever height the
+ * Scene happened to be), tighter padding/spacing, and the button row order
+ * matched to the reference screenshot. The new scientific row (1/x, x^2,
+ * EXP, |x|) is slotted in right after the existing "+/- ln log ^" row.
+ * ===================================================
  */
-
 public class CalculatorView {
 
     private static final double BUTTON_HEIGHT = 46;
@@ -44,7 +41,7 @@ public class CalculatorView {
         root.setAlignment(Pos.TOP_CENTER);
         root.getStyleClass().add("calculator-body");
 
-        Label topLabel = new Label("LBYCPOB - E2x+ Modified by Group 10");
+        Label topLabel = new Label("LBYCPOB - E2x+");
         topLabel.getStyleClass().addAll("top-label", "branding-label");
 
         display = new TextField("0");
@@ -65,12 +62,21 @@ public class CalculatorView {
         // Row order matches the reference layout exactly.
         String[][] rowLabels = {
                 {"(", ")", "C", "CE"},
+                // ==================== ADDED ROW ====================
+                // Memory functions: MC (memory clear), MR (memory recall),
+                // M+ (memory add), M- (memory subtract).
+                {"MC", "MR", "M+", "M-"},
+                // =====================================================
                 {"shft", "sin", "cos", "tan"},
                 {"π", "!", "√", "%"},
                 {"+/-", "ln", "log", "^"},
                 // ==================== ADDED ROW ====================
                 // 1/x (reciprocal), x^2 (square), EXP (e^x), |x| (absolute value)
                 {"1/x", "x²", "EXP", "|x|"},
+                // =====================================================
+                // ==================== ADDED ROW ====================
+                // ∛x (cube root), x³ (cube), e (Euler's number), Ans (last answer)
+                {"∛x", "x³", "e", "Ans"},
                 // =====================================================
                 {"7", "8", "9", "/"},
                 {"4", "5", "6", "*"},
@@ -80,10 +86,16 @@ public class CalculatorView {
 
         String[][] rowStyles = {
                 {"function-button", "function-button", "function-button", "function-button"},
+                // ==================== ADDED ====================
+                {"function-button", "function-button", "function-button", "function-button"},
+                // =================================================
                 {"function-button", "scientific-button", "scientific-button", "scientific-button"},
                 {"function-button", "scientific-button", "scientific-button", "operator-button"},
                 {"function-button", "scientific-button", "scientific-button", "operator-button"},
                 {"scientific-button", "scientific-button", "scientific-button", "scientific-button"},
+                // ==================== ADDED ====================
+                {"scientific-button", "scientific-button", "function-button", "function-button"},
+                // =================================================
                 {"number-button", "number-button", "number-button", "operator-button"},
                 {"number-button", "number-button", "number-button", "operator-button"},
                 {"number-button", "number-button", "number-button", "operator-button"},
