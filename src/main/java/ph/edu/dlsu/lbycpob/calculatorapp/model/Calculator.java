@@ -37,6 +37,10 @@ public abstract class Calculator {
     public static final double PI = Math.PI;
 
 
+    // Calculator.java — E made public (was protected) so Controller can read it
+    public static final double E = Math.E;
+
+
     /**
      * Abstract method that must be implemented by subclasses to define specific operations.
      * <p>
