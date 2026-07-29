@@ -63,8 +63,14 @@ public class CalculatorView {
         grid.setVgap(ROW_GAP);
 
         // Row order matches the reference layout exactly.
+
         String[][] rowLabels = {
                 {"(", ")", "C", "CE"},
+                // ==================== ADDED ROW ====================
+                // Memory functions: MC (memory clear), MR (memory recall),
+                // M+ (memory add), M- (memory subtract).
+                {"MC", "MR", "M+", "M-"},
+                // =====================================================
                 {"shft", "sin", "cos", "tan"},
                 {"π", "!", "√", "%"},
                 {"+/-", "ln", "log", "^"},
@@ -72,13 +78,17 @@ public class CalculatorView {
                 // 1/x (reciprocal), x^2 (square), EXP (e^x), |x| (absolute value)
                 {"1/x", "x²", "EXP", "|x|"},
                 // =====================================================
-                // CalculatorView.java — new row, inserted after the 1/x row
+                // ==================== ADDED ROW ====================
+                // ∛x (cube root), x³ (cube), e (Euler's number), Ans (last answer)
                 {"∛x", "x³", "e", "Ans"},
+                // =====================================================
                 {"7", "8", "9", "/"},
                 {"4", "5", "6", "*"},
                 {"1", "2", "3", "-"},
                 {"0", ".", "=", "+"},
         };
+
+
 
         String[][] rowStyles = {
                 {"function-button", "function-button", "function-button", "function-button"},
