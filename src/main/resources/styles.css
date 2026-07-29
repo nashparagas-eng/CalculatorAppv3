@@ -69,7 +69,7 @@
 
 /* Operator buttons */
 .operator-button {
-    -fx-background-color: linear-gradient(to bottom, #e74c3c, #c0392b);
+    -fx-background-color: linear-gradient(to bottom, #3ce7b9, #2bc098);
     -fx-text-fill: white;
     -fx-font-family: "Arial", sans-serif;
     -fx-font-size: 22px;
